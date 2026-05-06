@@ -1,91 +1,101 @@
-/* CSS Variables for theming */
+/* Softer black and white theme */
 :root {
-    --bg-color: #ffffff;
-    --text-color: #333333;
-    --hidden-flag-color: #ffffff; /* White flag on white bg */
+    --bg-color: #fafafa;
+    --text-color: #2a2a2a;
+    --hidden-flag-color: #fafafa;
 }
 
-/* Dark mode */
 @media (prefers-color-scheme: dark) {
     :root {
         --bg-color: #1a1a1a;
-        --text-color: #e0e0e0;
-        --hidden-flag-color: #1a1a1a; /* Black flag on black bg */
+        --text-color: #d0d0d0;
+        --hidden-flag-color: #1a1a1a;
     }
 }
 
-/* Apply theme colors */
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
-    font-family: Arial, sans-serif;
+    font-family: Georgia, serif;
     line-height: 1.6;
-    padding: 20px;
-    max-width: 800px;
+    padding: 40px 20px;
+    max-width: 700px;
     margin: 0 auto;
-    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Hidden flag that adapts to theme */
-.hidden-flag {
-    color: var(--hidden-flag-color);
-    user-select: text; /* Allow selection */
-    transition: color 0.3s ease;
-}
-
-/* When user selects text, show it */
-.hidden-flag::selection {
-    background: #667eea;
-    color: white;
-}
-
-.hidden-flag::-moz-selection {
-    background: #667eea;
-    color: white;
-}
-
-/* Style links */
-a {
-    color: #667eea;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-a:hover {
-    text-decoration: underline;
-    color: #8b9eff;
-}
-
-/* Style code/terminal text */
-i {
-    background: #f4f4f4;
-    padding: 2px 6px;
-    border-radius: 3px;
-    font-family: 'Courier New', monospace;
-    font-style: normal;
-    transition: background-color 0.3s ease;
-}
-
-/* Dark mode code styling */
-@media (prefers-color-scheme: dark) {
-    i {
-        background: #2a2a2a;
-    }
-}
-
-/* Headings */
 h1 {
-    color: #667eea;
-    border-bottom: 2px solid #667eea;
-    padding-bottom: 10px;
+    font-size: 28px;
+    margin-bottom: 30px;
 }
 
 h2 {
-    color: var(--text-color);
-    margin-top: 30px;
+    font-size: 20px;
+    margin-top: 40px;
+    margin-bottom: 15px;
 }
 
-/* Smooth transitions */
-* {
-    transition: background-color 0.3s ease, color 0.3s ease;
+p {
+    margin-bottom: 15px;
+}
+
+a {
+    color: var(--text-color);
+    text-decoration: underline;
+}
+
+i {
+    font-family: monospace;
+    font-style: normal;
+}
+
+.hidden-flag {
+    color: var(--hidden-flag-color);
+}
+
+.hidden-flag::selection {
+    background: var(--text-color);
+    color: var(--bg-color);
+}
+
+/* Flag checker */
+.flag-checker {
+    margin: 30px 0;
+}
+
+.flag-checker input {
+    width: 100%;
+    max-width: 300px;
+    padding: 8px;
+    font-family: monospace;
+    font-size: 14px;
+    border: 1px solid #999;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.flag-checker button {
+    padding: 8px 16px;
+    font-family: Georgia, serif;
+    border: 1px solid #999;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.flag-result {
+    display: block;
+    margin-top: 10px;
+}
+
+.flag-checker.correct input {
+    border-color: #4a7c59;
+}
+
+.flag-checker.correct .flag-result {
+    color: #4a7c59;
+}
+
+.flag-checker.incorrect .flag-result {
+    color: #a94442;
 }

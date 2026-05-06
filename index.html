@@ -37,12 +37,20 @@
     
     <h2>1. A Polar Bear in a Snowstorm</h2>
     <p>
-        One of the things we use in cyber is the terminal, which allows us
+        One of the things we use in cybersecurity is the terminal, which allows us
         to directly interact with websites, rather than using their GUI. While
         maybe not as pretty, the terminal gives us many tools to see what
         a website or server is doing or made of. Commands like <i>curl</i> or
-        <i>wget</i> can be pointed at a website's url to return its html. Sometimes
-        even simpler tools, like command+A/F, can be just as helpful!
+        <i>wget</i> can be pointed at a website's url to return its html.
     </p>
+    
+    <!-- Flag input box -->
+    <div class="flag-checker">
+        <input type="text" id="flag-input-1" placeholder='Enter as "FLAG{xyz}"' autocomplete="off">
+        <button onclick="checkFlag1()">Submit</button>
+        <span id="flag-result-1" class="flag-result"></span>
+    </div>
+
+    <script src="js/flags.js"></script>
 </body>
 </html>
