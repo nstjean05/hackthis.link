@@ -1,0 +1,22 @@
+# Runtime databases (any project)
+*.db
+*.sqlite
+*.sqlite3
+
+# NPM's own generated data/certs
+nginx-proxy-manager/data/
+nginx-proxy-manager/letsencrypt/
+
+# Uptime Kuma's own data
+uptime-kuma/data/
+
+# Secrets
+.env
+*.token
+
+# Python
+__pycache__/
+*.pyc
+
+# Editor/OS junk
+.DS_Store
