@@ -1,4 +1,0 @@
-Contact: mailto:stjeann05@gmail.com
-Expires: 2027-07-14T00:00:00Z
-Canonical: https://noahstjean.com/.well-known/security.txt
-Preferred-Languages: en
